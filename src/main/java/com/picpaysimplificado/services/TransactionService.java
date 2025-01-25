@@ -27,7 +27,7 @@ public class TransactionService {
     @Autowired
     public TransactionRepository repository;
 
-    public createTransaction(TransactionDTO transaction) throws Exception {
+    public void createTransaction(TransactionDTO transaction) throws Exception {
         User sender = this.userService.findUserById(transaction.senderId());
         User receiver = this.userService.findUserById(transaction.receiverId());
 
